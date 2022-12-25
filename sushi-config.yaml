@@ -1,0 +1,58 @@
+# ╭─────────────────────────Commonly Used ImplementationGuide Properties───────────────────────────╮
+# │  The properties below are used to create the ImplementationGuide resource. The most commonly   │
+# │  used properties are included. For a list of all supported properties and their functions,     │
+# │  see: https://fshschool.org/docs/sushi/configuration/.                                         │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+id: fhir.datosDDMM
+canonical: http://DisenodatosDDMM.uv.cl
+version: 1.0.0
+name: DisenoFormatoDatosDDMM
+title: Formato de datos dispositivos medicos
+status: draft
+publisher:
+  name: Nicolas Mendoza
+  url: http://DisenodatosDDMM.uv.cl/infosalud.uv
+  email: nicolas.mendoza@alumnos.uv.cl
+
+description: Esta guia de implementación es diseñada para el uso de datos obtenidos de dispositivos medicos que obtienen datos de Pulso Cardiaco (HR), Temperatura, Frecuencia Respiratoria (RR), Saturación de oxigeno (SpO2) y Presión Arterial (BP)
+fhirVersion: 4.0.1
+copyrightYear: 2022+
+
+releaseLabel: ci-build
+license: CC0-1.0
+jurisdiction: urn:iso:std:iso:3166#CL "Chile"
+copyright: "Usado con el permiso de HL7 International, todos los derechos resevados en los Licencias de HL7 Internacional."
+
+parameters:
+  show-inherited-invariants: false
+dependencies: 
+  hl7.fhir.cl.corecl: 1.7.0
+
+menu:
+  Inicio: index.html
+  Objetivos: objetives.html
+  Generalidades: generalities.html
+  Caso de uso: usecase.html
+  Operaciones y terminologias: operations.html
+  Perfiles y extenciones: profiles.html
+  Ejemplos: all-examples.html
+  
+
+pages:
+  index.md:
+    title: Inicio
+  objetives.md:
+    title: Objetivos
+  generalities.md:
+    title: Generalidades
+  usecase.md:
+    title: Caso de Uso
+  operations.md:
+    title: Operaciones y terminologias
+  profiles.md:
+    title: Perfiles y Extensiones
+  all-examples.md:
+    title: Ejemplos
+
+
+

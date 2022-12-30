@@ -54,24 +54,6 @@ Las Operaciones que se pueden ejecutar como base en el manejo de recursos en FHI
 
 <tr>
 
-<td>vread</td>
-
-<td>/[type]/[id]/_history/[vid]</td>
-
-<td>GET</td>
-
-<td>N/A</td>
-
-<td>N/A</td>
-
-<td>N/A</td>
-
-<td>N/A</td>
-
-</tr>
-
-<tr>
-
 <td>update</td>
 
 <td>/[type]/[id]</td>
@@ -85,42 +67,6 @@ Las Operaciones que se pueden ejecutar como base en el manejo de recursos en FHI
 <td>O</td>
 
 <td>O: If-Match</td>
-
-</tr>
-
-<tr>
-
-<td>patch</td>
-
-<td>/[type]/[id]</td>
-
-<td>PATCH</td>
-
-<td>R (may be a patch type)</td>
-
-<td>Patch</td>
-
-<td>O</td>
-
-<td>O: If-Match</td>
-
-</tr>
-
-<tr>
-
-<td>delete</td>
-
-<td>/[type]/[id]</td>
-
-<td>DELETE</td>
-
-<td>N/A</td>
-
-<td>N/A</td>
-
-<td>N/A</td>
-
-<td>N/A</td>
 
 </tr>
 
@@ -144,45 +90,11 @@ Las Operaciones que se pueden ejecutar como base en el manejo de recursos en FHI
 
 <tr>
 
-<td rowspan="2">search</td>
+<td>delete</td>
 
-<td>/[type]?</td>
+<td>/[type]/[id]</td>
 
-<td>GET</td>
-
-<td>N/A</td>
-
-<td>N/A</td>
-
-<td>N/A</td>
-
-<td>N/A</td>
-
-</tr>
-
-<tr>
-
-<td>/[type]/_search?</td>
-
-<td>POST</td>
-
-<td>application/x-www-form-urlencoded</td>
-
-<td>form data</td>
-
-<td>N/A</td>
-
-<td>N/A</td>
-
-</tr>
-
-<tr>
-
-<td>search-all</td>
-
-<td>?</td>
-
-<td>GET</td>
+<td>DELETE</td>
 
 <td>N/A</td>
 
@@ -203,7 +115,7 @@ Notas:
 *   N/A = no Presente, R = Requerido, O = opcional
 *   Para las operaciones definidas en todos los recursos, incluyendo acceso directo al meta elemento, ver  [Resource Operations](http://hl7.org/fhir/resource-operations.html)
 
-La aplicación específica de cada parametro, para cada una de las operaciones, dependen de cada recurso, en en los cuales el estándar especifica cuales se encuentran definidos para cada operción.
+La aplicación específica de cada parametro, para cada una de las operaciones, dependen de cada recurso, en en los cuales el estándar especifica cuales se encuentran definidos para cada operación.
 
 <table class="grid">
 
@@ -251,22 +163,6 @@ La aplicación específica de cada parametro, para cada una de las operaciones, 
 
 <tr>
 
-<td>vread</td>
-
-<td>R</td>
-
-<td>R: Resource</td>
-
-<td>N/A</td>
-
-<td>R: ETag, Last-Modified</td>
-
-<td>200, 404</td>
-
-</tr>
-
-<tr>
-
 <td>update</td>
 
 <td>R if body</td>
@@ -278,38 +174,6 @@ La aplicación específica de cada parametro, para cada una de las operaciones, 
 <td>R: ETag, Last-Modified</td>
 
 <td>200, 201, 400, 404, 405, 409, 412, 422</td>
-
-</tr>
-
-<tr>
-
-<td>patch</td>
-
-<td>R if body</td>
-
-<td>O: Resource (Prefer)</td>
-
-<td>N/A</td>
-
-<td>R: ETag, Last-Modified</td>
-
-<td>200, 201, 400, 404, 405, 409, 412, 422</td>
-
-</tr>
-
-<tr>
-
-<td>delete</td>
-
-<td>R if body</td>
-
-<td>O: OperationOutcome</td>
-
-<td>N/A</td>
-
-<td>N/A</td>
-
-<td>200, 202, 204, 404, 405, 409, 412</td>
 
 </tr>
 
@@ -329,35 +193,17 @@ La aplicación específica de cada parametro, para cada una de las operaciones, 
 
 </tr>
 
-<tr>
+<td>delete</td>
 
-<td>search</td>
+<td>R if body</td>
 
-<td>R</td>
-
-<td>R: Bundle</td>
+<td>O: OperationOutcome</td>
 
 <td>N/A</td>
 
 <td>N/A</td>
 
-<td>200, 401?</td>
-
-</tr>
-
-<tr>
-
-<td>search-all</td>
-
-<td>R</td>
-
-<td>R: Bundle</td>
-
-<td>N/A</td>
-
-<td>N/A</td>
-
-<td>200, 401?</td>
+<td>200, 202, 204, 404, 405, 409, 412</td>
 
 </tr>
 
@@ -365,7 +211,7 @@ La aplicación específica de cada parametro, para cada una de las operaciones, 
 
 </table>
 
-Not: Esta Tabla lista los códigos de estado, pero otros mas pueden ser descrito por la especificación de HTTP. Códgos adicionales son comunmente errores de servidor y de protocolos de autentificación.
+Nota: Esta Tabla lista los códigos de estado, pero otros mas pueden ser descrito por la especificación de HTTP. Códgos adicionales son comunmente errores de servidor y de protocolos de autentificación.
 
 El listado de recursos se define en:
 
@@ -386,31 +232,15 @@ Los métodos y parámetros para la consulta de recursos se describen a continuac
 
 Lo anterior es aplicable para un recurso ya creado el cual se almacena con una identificación generada en ese momento    
 
-2.  Los servidores **DEBEN** soportar buscar un recurso Patient mediante un identificador como el número RUN de la Cédula de Identidad Nacional por ejemplo, utilizando el parámetro de búsqueda **[identifier]:
+1.  Los servidores **DEBEN** soportar buscar un recurso Patient mediante un identificador como el número RUN de la Cédula de Identidad Nacional por ejemplo, utilizando el parámetro de búsqueda **[identifier]:
 
     GET [base]/Patient?identifier={system|}[code]
 
     Ejemplo:
 
-    1.  <table>
+    1.  GET [base]/Patient?identifier=http://minsal.cl/API/Paciente|99999999
 
-        <tbody>
-
-        <tr>
-
-        <td>GET [base]/Patient?identifier=http://minsal.cl/API/Paciente</td>
-
-        <td>|99999999</td>
-
-        </tr>
-
-        </tbody>
-
-        </table>
-
-    
-
-3.  Ejemplos de búsquedas por otros parámetros
+2.  Ejemplos de búsquedas por otros parámetros
 
     Ejemplo:
 
@@ -421,14 +251,5 @@ Lo anterior es aplicable para un recurso ya creado el cual se almacena con una i
 
 #### Agregando recursos (creando recursos para ser almacenados)
 
-POST [base]/Patient. En el Body, un recurso paciente compatible con el/los perfiles definido en el Core-Cl (para este caso sería el perfil Paciente-CL)
+POST [base]/Patient. En el Body, un recurso paciente.
 
-### Terminologia
-
-#### Vocabularios
-
-_Profesionales de la Salud:_ desplegados a través de la Super Intendencia y el sistema Midas, este registro se expone por medio del recurso  FHIR Practitioner.
-
-_Establecimientos de Salud_: Su registro se expone a través de los recursos FHIR Organization.
-
-_Pacientes:_ Se identifican por medio de su número identificador que puede ser cualquier tipo de documento, especificado en las tablas de HL7 V3 relacionados con identificadores de personas.

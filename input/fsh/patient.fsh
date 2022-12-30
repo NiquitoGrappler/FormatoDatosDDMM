@@ -17,13 +17,13 @@ Description: "Este perfil se ha modelado con el fin de cubrir las necesidades de
 * identifier ^definition = "Este es el listado de Identificaciones de un paciente. Se procura como R2 el RUN, pero en caso de no existir ese identificador se debe ocupar otro nacional u otro otorgado por país extranjero"
 * identifier ^comment = "En caso de que el paciente posea una CI con número RUN válido, este debe ser ingresado como identificador, independiente de que tenga otros identificadores, los cuales también pueden ser ingresados."
 * identifier.extension MS
-* identifier.use MS
+* identifier.use 
 * identifier.use ^definition = "Se definirá este uso siempre como \"official\" debido a que cualquier ID presentado para motivos de este perfil deb ser de este tipo"
 * identifier.use ^comment = "Se definirá como official pues en una primera etapa solo se considerarán los identidicadores en esa categoría. Para una segunda etapa se abrirá este elemento para cualquier clase de identificador"
 * name 1..1 MS
 * name ^short = "Determinación del nombre registrado oficialmente del Paciente"
 * name ^definition = "Determinación del nombre registrado oficialmente del Paciente"
-* name.use 1..
+* name.use 1.. MS
 * name.use = #official
 * name.use ^short = "uso del nombre del paciente"
 * name.use ^definition = "este slice corresponde al nombre registrado al momento de nacer, por lo que se fuerza el valor \"official\""
@@ -31,6 +31,7 @@ Description: "Este perfil se ha modelado con el fin de cubrir las necesidades de
 * name.family 1.. MS
 * name.family ^short = "Primer Apellido"
 * name.family ^definition = "Se define el primer apellido registrado al momento de nacer o aquel que se ha inscrito legalmente en el Registro Civil"
+* name.family.extension
 * name.family.extension ^short = "Extensión para segundo apellido"
 * name.family.extension ^definition = "Extensión para la declaracion de un segundo apellido"
 * name.family.extension contains $humanname-mothers-family named Mothers-family 0..1

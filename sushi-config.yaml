@@ -7,7 +7,7 @@ id: fhir.datosDDMM
 canonical: http://DisenodatosDDMM.uv.cl
 version: 1.0.0
 name: DisenoFormatoDatosDDMM
-title: Formato de datos dispositivos medicos
+title: Formato De Datos Dispositivos Médicos
 status: draft
 publisher:
   name: Nicolas Mendoza
@@ -33,7 +33,7 @@ menu:
   Objetivos: objetives.html
   Generalidades: generalities.html
   Caso de uso: usecase.html
-  Operaciones y terminologias: operations.html
+  Operaciones: operations.html
   Perfiles y extenciones: profiles.html
   Ejemplos: all-examples.html
   
@@ -48,7 +48,7 @@ pages:
   usecase.md:
     title: Caso de Uso
   operations.md:
-    title: Operaciones y terminologias
+    title: Operaciones
   profiles.md:
     title: Perfiles y Extensiones
   all-examples.md:

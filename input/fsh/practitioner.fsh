@@ -9,7 +9,6 @@ Description: "Este Perfil fue creado para cubrir la descripción de un Prestador
 * . ^short = "Prestador a nivel nacional"
 * . ^definition = "\\-"
 * . ^comment = "\\-"
-* ^version = "1.5.0"
 * ^status = #active
 * ^date = "2022-06-14T00:52:46-04:00"
 * ^publisher = "HL7 Chile"

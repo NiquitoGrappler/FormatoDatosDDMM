@@ -18,34 +18,6 @@ A Través de los perfiles de observación podremos asociar las mediciones a un p
 
 <br>
 
-
-###	Procesos
-<br>
-
-El proyecto se separa en básicamente tres procesos, los cuales son enumerados continuación:
-<br>
-
-#####	Proceso de almacenamiento
-
-Este proceso se desarrolla en el momento en que un usuario quiere convertir sus datos al estandar FHIR. Dentro de
-los pasos fundamentales de este caso se encuentran:
-
-* Publicación plantilla de datos
-* Validación de recurso
-<br>
-
-#####	Proceso de actualización
-
-Este proceso se desarrolla en el momento en que el usuario quiere actualizar la información de algun perfil anteriormente publicado en el repositorio.
-
-#####	Proceso de lectura
-
-Este proceso se desarrolla en el momento en que el usuario quiere obtener información de una observación de un paciente del ecosistema de salud digital. Los pasos fundamentales son los siguientes:
-* Consulta al repositorio por observación de paciente
-* Revisión de estado de observación
-* Notificación de disponibilidad de recurso
-<br>
-
 ### Contenido de la Guía
 <br>
 

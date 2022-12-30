@@ -44,9 +44,11 @@ Usage: #example
 // Ejemplo de Prestador
 
 Instance: CorePrestadorCl
+Title: "Ejemplo de prestador"
+Description: "Profesional encargado de la observación"
 InstanceOf: Practitioner
 Usage: #example
-* meta.profile = "https://hl7chile.cl/fhir/ig/CoreCL/StructureDefinition/CorePrestadorCl"
+
 * identifier[0].use = #official
 * identifier[=].system = "http://api_run/run"
 * identifier[=].value = "8336277-3"
@@ -87,8 +89,9 @@ Usage: #example
 * subject = Reference(PacienteCl1)
 * effectiveDateTime = "2022-09-02T14:22:00+03:00"
 * device = Reference(Dispositivo)
-* performer = Reference(CorePrestadorCl)
 * valueQuantity = 44 '/min' "beats/min"
+* performer = Reference(CorePrestadorCl)
+
 
 // Ejemplo de Obsevación de Pulso Cardiaco con multiples datos
 
@@ -104,11 +107,11 @@ Usage: #example
 * subject = Reference(PacienteCl1)
 * effectiveDateTime = "2022-09-02T14:22:00+03:00"
 * device = Reference(Dispositivo)
-* performer = Reference(CorePrestadorCl)
 * valueSampledData.origin.value = 58
 * valueSampledData.period = 1000 // Intervalo de tiempo entre una muestra y otra en mS (milisegundos)
 * valueSampledData.dimensions = 1
 * valueSampledData.data = "58 58 58 59 59 58 58 58 59 58 59 59 61 61 62 63 63 63 63 64 64 65 66 66 66 66 67 68 70 70 71 70 69 69 69 67 66 67 67 67 67 66 65 65 63 63 62 62 61 61 61 62 62 62 63 63 63 63 64 64 65 65 65 64 65 66 67 68 68 68 69 70 70 71 72 71 71 72 0 0 0 0 65 65 64 62 59 59 55 56 56 57 60 61 61 62 62 62 62 63 64 64 64 63 62 62 61 62 62 62 63 63 63 63 63 63 64 64 64 63 63 63 62 63 62 62 62 61 61 61 60 60 60 61 62 62 63 64 64 65 65 65 65 65 65 64 64 64 65 65 64 64 64 63 63 64 64 64 64 64 64 64 64 64 65 65 66 66 67 67 67 67 66 66 67 67 68 68 68 68 68 68 66 65 65 65 65 65 64 64 63 63 62 62 62 63 63 64 64 63 63 63 63 63 64 65 66 66 66 66 66 65 65 65 65 66 66 67 67 66 66 65 64 64 64 64 66 66 67 67 69 70 69 69 69 69 69 69 69 69 67 66 66 65 64 64 65 65 65 65 64 63 63 62 62 63 62 62 61 60 59 59 59 60 61 61 62 62 63 63 63 62 62 63 64 64 63 63 62 61 62 63 63 63 63 63 63 63 63 63 63 63 63 63 63 63 63 63 62 63 63 63 63 63 63 65 65 65 64 63 63 64 64 67 67 67 67 68 66 66 65 63 63 63 64 64 64 64 64 64 64 64 64 65 65 65 64 64 64 64 63 63 63 63 63 62 62 62 62 62 62 62 62 61 61 61 61 60 61 61 61 60 60 60 60 61 61 62 62 62 62 61 61 61 61 61 61 62 61 62 62 64 64 65 65 67 67 67 66 65 65 65 66 66 67 67 66 66 65 64 63 63 62 62 61 61 60 59 59 60 60 60 61 61 60 61 61 60 60 60 60 62 63 64 64 64 63 62 62 61 62 62 63 64 64 64 65 64 64 65 66 66 66 65 67 68 68 69 69 68 67 67 67 68 69 69 68 67 66 65 64 64 64 64 64 64 64 64 63 63 62 62 61 61 61 61 61 60 60 61 62 62 62 63 64 64 65 64 64 64 64 64 63 63 63 64 64 64 62 61 61 60 60 60 60 61 61 61 60 61 61 61 62 62 62 62 62 62 62 62 61 61 62 63 64 65 65 64 64 65 65 65 66 65 64 64 63 62 62 62 62 62 62 62 63 63 62 61 61 62 62 62 64 64 65 65 64 64 64 64 64 64 65 65 64 63 63 63 64 64 64 64 64 64 65 65 66 66 66 66 65 65 65 65 65 66 66 67 67 67 67 68 69 69 69 69 70 70 72 73 74 76 75 75 76 76 77 0 0 58 67 69 67 68 68 68 60 59 63 65 64 65 65 65 64 64 64 64 64 64 62 62 62 61 60 58 58"
+* performer = Reference(CorePrestadorCl)
 
 // Ejemplo de Observación de Ritmo respiratorio
 
@@ -124,8 +127,8 @@ Usage: #example
 * effectiveDateTime = "2022-09-02T14:22:00+03:00"
 * subject = Reference(PacienteCl1)
 * device = Reference(Dispositivo)
-* performer = Reference(CorePrestadorCl)
 * valueQuantity = 26 #/min "breaths per minute"
+* performer = Reference(CorePrestadorCl)
 
 // Ejemplo de Observación de Ritmo respiratorio de multiples datos
 
@@ -141,11 +144,12 @@ Usage: #example
 * effectiveDateTime = "2022-09-02T14:22:00+03:00"
 * subject = Reference(PacienteCl1)
 * device = Reference(Dispositivo)
-* performer = Reference(CorePrestadorCl)
 * valueSampledData.origin.value = 26
 * valueSampledData.period = 60000 // Intervalo de tiempo entre una muestra y otra en mS (milisegundos)
 * valueSampledData.dimensions = 1
 * valueSampledData.data = "26 25 26 24 26 23 22 22 22 22 21 20 20 20 20 20 20 20 19 19 19 18 18 19 19 19 19 19 19"
+* performer = Reference(CorePrestadorCl)
+
 
 // Ejemplo de Observación de Temperatura
 
@@ -161,8 +165,9 @@ Usage: #example
 * effectiveDateTime = "2022-09-02T14:22:00+03:00"
 * subject = Reference(PacienteCl1) 
 * device = Reference(Dispositivo)
-* performer = Reference(CorePrestadorCl)
 * valueQuantity = 36.5 'Cel' "Cel"
+* performer = Reference(CorePrestadorCl)
+
 
 // Ejemplo de Observación de Temperatura de multiples datos
 
@@ -178,11 +183,12 @@ Usage: #example
 * effectiveDateTime = "2022-09-02T14:22:00+03:00"
 * subject = Reference(PacienteCl1) 
 * device = Reference(Dispositivo)
-* performer = Reference(CorePrestadorCl)
 * valueSampledData.origin.value = 36.3
 * valueSampledData.period = 1000 // Intervalo de tiempo entre una muestra y otra en mS (milisegundos)
 * valueSampledData.dimensions = 1
 * valueSampledData.data = "36.3 36.3 36.4 36.4 36.5 36.6 36.7 36.5 36.7 36.8 36.8 36.9 37 37.1 37.2"
+* performer = Reference(CorePrestadorCl)
+
 
 // Ejemplo de Observación de SpO2
 
@@ -198,8 +204,9 @@ Usage: #example
 * effectiveDateTime = "2022-09-02T14:22:00+03:00"
 * subject = Reference(PacienteCl1)
 * device = Reference(Dispositivo)
-* performer = Reference(CorePrestadorCl)
 * valueQuantity = 99 '%' "%O2"
+* performer = Reference(CorePrestadorCl)
+
 
 // Ejemplo de Observación de SpO2 de multiples valores
 
@@ -215,12 +222,11 @@ Usage: #example
 * effectiveDateTime = "2022-09-02T14:22:00+03:00"
 * subject = Reference(PacienteCl1)
 * device = Reference(Dispositivo)
-* performer = Reference(CorePrestadorCl)
 * valueSampledData.origin.value = 97.8
 * valueSampledData.period = 1000 // Intervalo de tiempo entre una muestra y otra en mS (milisegundos)
 * valueSampledData.dimensions = 1
 * valueSampledData.data = "97.8 97.8 97.8 97.8 97.9 97.9 97.9 97.9 97.9 97.9 97.9 97.9 97.9 97.9 97.8 97.8 97.8 97.8 97.8 97.8 97.8 97.8 97.8 97.8 97.8 97.8 97.8 97.8 97.8 97.8 97.8 97.8 97.8 97.8 97.8 97.8 97.8 97.8 97.8 97.8 97.8 97.8 97.9 97.9 98 98 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.2 98.2 98.2 98.2 98.2 98.2 98.2 98.2 98.2 98.2 98.2 98.2 98.2 98.2 98.2 98.2 98.2 98.2 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.2 98.2 98.2 98.2 98.2 98.2 98.2 98.2 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.2 98.2 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98 98 98 98 98 98 98 98 98 98 98 98 98 98 98 98 98 98 98 98 98 98 98 98 98 98 98 98 98 98 98 98 98 98 98 98 98 98 98 98 98 98 98 98 98 98 98 98 98 98 98 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.1 98.2 98.2 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.4 98.4 98.4 98.4 98.4 98.4 98.4 98.4 98.4 98.4 98.4 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.4 98.4 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.4 98.4 98.4 98.4 98.4 98.4 98.4 98.4 98.4 98.4 98.4 98.4 98.4 98.4 98.4 98.4 98.4 98.4 98.4 98.3 98.4 98.3 98.4 98.4 98.4 98.4 98.4 98.4 98.4 98.4 98.4 98.4 98.4 98.4 98.4 98.4 98.4 98.4 98.4 98.4 98.4 98.4 98.4 98.4 98.4 98.4 98.4 98.4 98.4 98.4 98.4 98.4 98.4 98.4 98.4 98.4 98.4 98.4 98.4 98.4 98.4 98.4 98.4 98.4 98.4 98.4 98.4 98.4 98.4 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.2 98.2 98.2 98.2 98.2 98.2 98.2 98.2 98.2 98.2 98.2 98.2 98.2 98.2 98.2 98.2 98.2 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.3 98.4 98.4 98.4 98.4 98.4 98.4 98.4 98.4 98.4 98.4 98.4 98.4 98.4 98.4 98.4 98.4 98.4 98 97.1 97.1 97.1 97.1 97.1 97.1 97.1 97.1 97.1 97.2 97.2 97.2 97.2 97.2 97.2 97.2 97.3 97.3 97.3 97.3 97.3 97.3 97.3 97.3 97.3 97.3 97.3 97.3 97.3 97.3 97.3 97.3 97.3 97.3 97.3 97.3 97.3 97.3 97.3 97.3 97.3 97.3 97.3 97.3 97.3"
-
+* performer = Reference(CorePrestadorCl)
 
 
 // Ejemplo de Observación de Presión Arterial
@@ -237,13 +243,14 @@ Usage: #example
 * effectiveDateTime = "2022-09-02T14:22:00+03:00"
 * subject = Reference(PacienteCl1) 
 * device = Reference(Dispositivo)
-* performer = Reference(CorePrestadorCl)
 * component[0].code = http://loinc.org#8480-6 "Systolic blood pressure"
 * component[=].code.text = "Presión arterial sistolica"
 * component[=].valueQuantity = 109 'mm[Hg]' "mmHg"
 * component[+].code = http://loinc.org#8462-4 "Diastolic blood pressure"
 * component[=].code.text = "Presión arterial diastolica"
 * component[=].valueQuantity = 44 'mm[Hg]' "mmHg"
+* performer = Reference(CorePrestadorCl)
+
 
 // Ejemplo de Observación de Presión Arterial de multiples valores
 
@@ -258,9 +265,9 @@ Usage: #example
 * code = http://loinc.org#85354-9 "Blood pressure panel with all children optional"
 * code.text = "Presión arterial sistolica y diastolica"
 * effectiveDateTime = "2022-09-02T14:22:00+03:00"
+* performer = Reference(CorePrestadorCl)
 * subject = Reference(PacienteCl1) 
 * device = Reference(Dispositivo)
-* performer = Reference(CorePrestadorCl)
 * component[0].code = http://loinc.org#8480-6 "Systolic blood pressure"
 * component[=].code.text = "Presión arterial sistolica"
 * component[=].valueSampledData.origin.value = 120

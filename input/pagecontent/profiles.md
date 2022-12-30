@@ -23,15 +23,15 @@ Estos corresponde a los perfiles asociados a los actores involucrados en las med
 			</tr>
 			<tr>
 			  <td><a href="StructureDefinition-CorePacienteCl.html">Panel de paciente</a></td>
-			  <td>Corresponde al perfil del paciente al cual se le efectuan la mediciónes</td>
+			  <td>Corresponde al perfil del paciente al cual le efectuan las mediciónes</td>
 			</tr>
 			<tr>
 			  <td><a href="StructureDefinition-PerfilDispositivo.html">Panel de dispositivo</a></td>
-			  <td>Corresponde al dispositivo utilizado en la obtención de las mediciónes</td>
+			  <td>Corresponde al dispositivo utilizado para obtener las mediciónes</td>
 			</tr>
 			<tr>
 			  <td><a href="StructureDefinition-CorePrestadorCl.html">Panel de prestador</a></td>
-			  <td>Corresponde al usuario encargado de la obtención de las mediciónes</td>
+			  <td>Corresponde al usuario encargado de obtener las mediciónes</td>
 			</tr>
 		</tbody>
 	</table>

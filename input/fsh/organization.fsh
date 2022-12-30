@@ -2,7 +2,7 @@ Profile: OrganizacionCL
 Parent: Organization
 Id: CoreOrganizacionCl
 Title: "Perfil de Organización"
-Description: "Este Perfil ha sido desarrollado para cubrir las necesidades del Caso de Uso de Receta Electrónica. Sin embargo, se ha modelado para también cubrir las necesidades nacionales de un Recurso de Organización en Salud"
+Description: "Este Perfil ha sido desarrollado para identificar la organización responsable del dispositivo médico"
 * ^version = "0.1.0"
 * ^status = #active
 * ^url = "http://DisenodatosDDMM.uv.cl/StructureDefinition/CoreOrganizacionCl"

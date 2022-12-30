@@ -25,7 +25,7 @@ Description: "Este perfil se ha modelado con el fin de cubrir las necesidades de
 * status = #active
 * status ^short = "Estado del equipo médico" 
 * status ^definition = "Determina el estado del dispositivo con el valueSet FHIRDeviceStatus (Activo | Inactivo | Ingresado por error | Desconocido), para este caso de uso se fija en 'active' el estado de los dispositivos médicos"
-* deviceName 0..* MS
+* deviceName 1..* MS
 * deviceName ^short = "Nombre y tipo de nombre del dispositivo médico"
 * deviceName ^definition = "Nombre de dispositivo médico asignado por la terminología escogida en su tipo de nombre"
 * deviceName.name 1.. MS

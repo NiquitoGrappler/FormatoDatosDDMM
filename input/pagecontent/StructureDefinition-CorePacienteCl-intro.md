@@ -20,9 +20,4 @@ La definición formal del Perfil en la legueta Text Summary indica cuantos de es
 
 Consideraciones para la implementación:
 
-* Considerar para el identifier.
-    * El elemento identifier considera en type la declaración del tipo de documento.
-    * Por motivos de no complicar el elemento no se desarrolló un slice para diferenciar el RUN. Sin embargo, es recomendable considerar el RUN como uno de los identificadores declarados.
-* Para el elemento name se agrega la extensión externa de 2o apellido y considear un slice que diferencia:
-    * Nombres oficial
-    * Nombre social, el cual elimina elementos como el apellido    
+* Para el elemento name se agrega la extensión externa de 2o apellido 

@@ -38,3 +38,9 @@ Description: "Este perfil se ha modelado con el fin de cubrir las necesidades de
 * name.given 1.. MS
 * name.given ^short = "Primer nombre y nombres del Paciente"
 * name.given ^definition = "Todos los nombres de los pacientes no necesariamente solo el Primer Nombre"
+* gender 1.. MS
+* gender ^short = "Sexo de nacimiento Registrado, male | female | other | unknown (requerido)"
+* gender ^definition = "Sexo de nacimiento Registrado"
+* birthDate 1.. MS
+* birthDate ^short = "Fecha de nacimiento del Paciente. El formato debe ser YYYY-MM-DD"
+* birthDate ^definition = "Fecha de nacimiento del Paciente. El formato debe ser YYYY-MM-DD (Ej: 1996-08-21)"

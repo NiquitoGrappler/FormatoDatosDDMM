@@ -5,7 +5,7 @@ Esta guía de implementación esta diseñada para la obtención de datos de disp
 <br>
 <div align="center">
   <img src="Diagramasec.png" width="600"> 
-  <p>Diagrama de Secuencia de usuario a repositorio FHIR </p>
+  <p>Diagrama de Secuencia de Cliente a Servidor </p>
 </div>
 <br>
 

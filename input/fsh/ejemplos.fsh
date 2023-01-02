@@ -24,6 +24,8 @@ Usage: #example
 * name[=].family.extension.valueString = "Parra"
 * name[=].given[0] = "Nicolas"
 * name[=].given[+] = "Andres"
+* gender = #male
+* birthDate = "1997-03-12"
 
 
 // Ejemplo de Dispositivo
@@ -46,7 +48,7 @@ Usage: #example
 Instance: CorePrestadorCl
 Title: "Ejemplo de prestador"
 Description: "Profesional encargado de la observación"
-InstanceOf: Practitioner
+InstanceOf: CorePrestadorCl
 Usage: #example
 
 * identifier[0].use = #official
